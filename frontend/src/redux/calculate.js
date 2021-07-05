@@ -10,7 +10,7 @@ const Calculate = ({ insurance }) => {
     const FirstName = insurance.FirstName;
     const handleCalculate = async(e) => {
         console.log(" start Calculate");
-        axios.post("http://localhost:5000/users/get_data", { FirstName })
+        axios.post("http://insuranseserver.herokuapp.com/users/get_data", { FirstName })
             .then(response => {
                 var res = JSON.parse(JSON.stringify(response.data));
                 const carstatus = res.CarStatus;
@@ -42,7 +42,7 @@ const Calculate = ({ insurance }) => {
 
     }
     if (insurance.Review == "Reviewed") {
-        axios.post("http://localhost:5000/users/get_data", { FirstName })
+        axios.post("http://insuranseserver.herokuapp.com/users/get_data", { FirstName })
         .then(response => {
             var res = JSON.parse(JSON.stringify(response.data));
             setdata(res);

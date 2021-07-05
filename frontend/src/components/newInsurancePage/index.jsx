@@ -91,7 +91,7 @@ function NewInsurance(props) {
           
 
             console.log("starrting post new insurance");
-            axios.post('http://localhost:5000/users/add_insurance', {
+            axios.post('http://insuranseserver.herokuapp.com:5000/users/add_insurance', {
                 SocialNumber: state.SocialNumber,
                 FirstName: state.fNam,
                 Lastname: state.lName,

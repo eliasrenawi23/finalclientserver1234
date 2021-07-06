@@ -43,7 +43,7 @@ export default class RegistrationPage extends Component {
      validateRegistraion=()=> {
    
     this.setState({status: "Please Wait..."});
-    axios.post('http://insuranseserver.herokuapp.com/users/add',{
+    axios.post('http://localhost:5000/users/add',{
         //email: this.state.email, password: this.state.password
         firstname: this.state.name,
         lastname: this.state.familyName,

@@ -29,7 +29,7 @@ function NewInsurance(props) {
         prevComp: "Harel",
         prevNum: "",
         prevID: "",
-        request_number: request_num.toString()
+        request_number: request_num
     };
 
 
@@ -91,7 +91,7 @@ function NewInsurance(props) {
           
 
             console.log("starrting post new insurance");
-            axios.post('http://insuranseserver.herokuapp.com:5000/users/add_insurance', {
+            axios.post('http://localhost:5000/users/add_insurance', {
                 SocialNumber: state.SocialNumber,
                 FirstName: state.fNam,
                 Lastname: state.lName,
@@ -104,7 +104,7 @@ function NewInsurance(props) {
                 RequestNumber: state.request_number
             })
                 .then(response => {
-                    window.location.href = "/dashboard";
+                    window.location.href = "/ThankYou";
 
 
                 })

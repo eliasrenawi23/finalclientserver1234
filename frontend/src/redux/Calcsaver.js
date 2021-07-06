@@ -15,7 +15,7 @@ const Calcsaver = ({ SEVERITY }) => {
         return <div class="alert alert-warning" role="alert"> High</div>
     }
     else if (SEVERITY == "severe") {
-        return <div class="alert alert-danger" role="alert"> Sever</div>
+        return <div class="alert alert-danger" role="alert"> Severe</div>
     }
     return (<div class="alert alert-dark" role="alert">TBD </div>)
 }

@@ -19,7 +19,7 @@ export default function DashboardPage({ match }) {
         const email = localStorage.getItem('email');
         const password = localStorage.getItem('password');
         setEm(email)
-        axios.post('http://insuranseserver.herokuapp.com/users/getuser',{email: email, password: password, recaptcha:"1"})
+        axios.post('https://insuranseserver.herokuapp.com/users/getuser',{email: email, password: password, recaptcha:"1"})
         .then(response => {
         var res= JSON.parse(JSON.stringify(response.data));
 

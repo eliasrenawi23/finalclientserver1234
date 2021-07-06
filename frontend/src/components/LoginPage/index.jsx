@@ -28,7 +28,7 @@ export default function LoginPage({ match }) {
         
         setStatus("Please Wait...");
 
-            axios.post('http://insuranseserver.herokuapp.com/users/getuser',{email: userEmail, password: userPassword})
+            axios.post('http://localhost:5000/users/getuser',{email: userEmail, password: userPassword})
 
                 .then(response => {
                 var res= JSON.parse(JSON.stringify(response.data));
